@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/goToAddActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addActivityPromptTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:text="+"
+        android:visibility="gone"
+        android:background="#3dddb7"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/addActivityPromptTextView"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="166dp"
+        android:gravity="center_horizontal"
+        android:text="You haven't added any activities for the day. Add one now?"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/logTitleTextView"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Today's Activities"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/logDateTitleTextView"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="Date"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/parentLinearLayout">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/goToAdviceBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/addActivityFromLogBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-134dp"
+        android:layout_marginRight="137dp"
+        android:layout_marginBottom="16dp"
+        android:text="Advice"
+        android:background="#3dddb7"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/addActivityFromLogBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="+"
+        android:background="#3dddb7"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/goToAnalyticsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/addActivityFromLogBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="137dp"
+        android:layout_marginRight="-134dp"
+        android:layout_marginBottom="16dp"
+        android:text="Analytics"
+        android:background="#3dddb7"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>

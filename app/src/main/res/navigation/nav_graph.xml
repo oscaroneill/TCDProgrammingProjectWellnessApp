@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginActivity">
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.group24.wellnessapp.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login">
+        <action
+            android:id="@+id/actionLoginToMain"
+            app:destination="@id/mainActivity" />
+    </activity>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.group24.wellnessapp.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main">
+        <action
+            android:id="@+id/actionMainToAdd"
+            app:destination="@id/addActivity" />
+    </activity>
+    <activity
+        android:id="@+id/addActivity"
+        android:name="com.group24.wellnessapp.AddActivity"
+        android:label="activity_add"
+        tools:layout="@layout/activity_add">
+        <action
+            android:id="@+id/actionAddToLog"
+            app:destination="@id/logActivity" />
+    </activity>
+    <activity
+        android:id="@+id/logActivity"
+        android:name="com.group24.wellnessapp.LogActivity"
+        android:label="activity_log"
+        tools:layout="@layout/activity_log">
+        <action
+            android:id="@+id/actionLogToAdd"
+            app:destination="@id/addActivity" />
+        <action
+            android:id="@+id/actionLogToAnalytics"
+            app:destination="@id/analyticsActivity" />
+    </activity>
+    <activity
+        android:id="@+id/analyticsActivity"
+        android:name="com.group24.wellnessapp.AnalyticsActivity"
+        android:label="activity_analytics"
+        tools:layout="@layout/activity_analytics">
+        <action
+            android:id="@+id/actionAnalyticsToLog"
+            app:destination="@id/logActivity" />
+    </activity>
+</navigation>
